@@ -1,5 +1,6 @@
 <div>
-  <span>{{showsName.name}}</span>
-
+  <ul>
+    <li *ngFor="let element of showName">{{element.name}}, {{element.language}}</li>
+  </ul>
 
 </div>

@@ -8,7 +8,7 @@ import { ShowsService } from '../shows/shows.service';
   styleUrls: ['./show-details.component.css']
 })
 export class ShowDetailsComponent implements OnInit {
-  showName: IShowDetails
+  showName: IShowDetails[]
   constructor(private showsService: ShowsService) {
 
 

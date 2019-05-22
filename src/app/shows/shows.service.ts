@@ -15,18 +15,24 @@ export class ShowsService {
   constructor(private httpClient: HttpClient) { }
 
 getShowDetails(showName: string) {
-  return this.httpClient.get<IShowDetailsData>(`${environment.baseUrl}api.tvmaze.com/search/shows?q=${showName}&appid=${environment.appId}`).pipe(map(data => this.transformToIShowDetails(data)))
+  return this.httpClient.get<IShowDetailsData[]>(`${environment.baseUrl}api.tvmaze.com/search/shows?q=${showName}&appid=${environment.appId}`).pipe(map(data => this.transformToIShowDetails(data)))
 }
 
-private transformToIShowDetails(data: IShowDetailsData) : IShowDetails {
-  return {
-    name: data.show.name,
-    genres: data.show.genres,
-    image: `http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg`,
-    rating: data.rating.average,
-    language: data.show.language,
-    summary: data.summary
+private transformToIShowDetails(data: IShowDetailsData[]) : IShowDetails[] {
 
-  }
+var displayData = [];
+for (let i = 0; i < data.length; i++){
+    let newData = {
+      name: data[i].show.name,
+      //genres: data[i].show.genres,
+      //image: `http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg`,
+      //rating: data.rating.average,
+      language: data[i].show.language,
+      //summary: data[i].show.summary      
+    };
+    displayData.push(newData);
+}
+  return displayData;
+
 }
 }
