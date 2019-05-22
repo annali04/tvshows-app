@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IShowDetails } from '../ishow-details';
+import { ShowsService } from '../shows/shows.service';
 
 @Component({
   selector: 'app-show-details',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-details.component.css']
 })
 export class ShowDetailsComponent implements OnInit {
+  showName: IShowDetails[]
+  constructor(private showsService: ShowsService) {
 
-  constructor() { }
 
+   }
+  
   ngOnInit() {
+    this.showsService.getShowDetails('Girls').subscribe(data => this.showName = data);
   }
 
 }
