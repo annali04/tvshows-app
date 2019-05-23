@@ -24,11 +24,11 @@ var displayData = [];
 for (let i = 0; i < data.length; i++){
     let newData = {
       name: data[i].show.name,
-      //genres: data[i].show.genres,
+      genres: data[i].show.genres,
       //image: `http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg`,
-      //rating: data.rating.average,
+      rating: data[i].show.rating.average,
       language: data[i].show.language,
-      //summary: data[i].show.summary      
+      summary: data[i].show.summary     
     };
     displayData.push(newData);
 }
