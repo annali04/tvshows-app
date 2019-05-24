@@ -1,6 +1,40 @@
+<h1>TVShows App</h1>
+
+<div>
+  <form class="example">
+    <input type="text" placeholder="" id="query" (keyup)="onKeyup($event)" #query>
+    <button type="submit">
+      <i class="fas fa-search"></i> 
+        Search
+     </button>
+  </form> 
+</div>
+
 <div>
   <ul>
-    <li *ngFor="let element of showName">{{element.name}}, {{element.language}}</li>
+      <li *ngFor="let element of showName">
+          <table>
+            <tr>
+              <td>{{element.name}}</td>
+            </tr>
+            <tr>
+              <td>{{element.language}}</td>
+            </tr>
+            <tr>
+              <td>{{element.genres}}</td>
+            </tr>
+            <tr>
+              <td>{{element.rating}}</td>
+            </tr>
+            <tr>
+              <td>{{element.summary}}</td>
+            </tr>
+            <tr>
+             
+            </tr>
+            <tr><br></tr>
+            </table>
+          </li>
   </ul>
-
 </div>
+
