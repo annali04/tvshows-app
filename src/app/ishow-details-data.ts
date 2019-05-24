@@ -11,10 +11,5 @@ export interface IShowDetailsData {
         }
         summary:string
     },
-    // rating: {
-    //     average: number
-    // },
-    
-    // summary: string
-
+   
 }

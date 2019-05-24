@@ -36,8 +36,9 @@ export class ShowDetailsComponent implements OnInit {
     }
   
   runService(){
-    console.log(JSON.stringify('ngonit'+this.query));
-    this.showsService.getShowDetails(this.query).subscribe(data => this.showName = data)
+    // console.log(JSON.stringify('ngonit'+this.query));
+    this.showsService.getShowDetails(this.query).subscribe(data => this.showName = data);
+    // console.log(JSON.stringify(this.showName));
   }
 
   ngOnInit() { }

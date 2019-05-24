@@ -15,6 +15,9 @@
       <li *ngFor="let element of showName">
           <table>
             <tr>
+                <td><img [src]="element.image" alt="image"></td>
+            </tr>
+            <tr>
               <td>{{element.name}}</td>
             </tr>
             <tr>
