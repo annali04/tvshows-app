@@ -27,7 +27,7 @@ private transformToIShowDetails(data: IShowDetailsData[]) : IShowDetails[] {
     let newData = {
       name: data[i].show.name,
       genres: data[i].show.genres,
-      // image: `http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg`,
+      image: data[i].show.image.medium,
       rating: data[i].show.rating.average,
       language: data[i].show.language,
       summary: data[i].show.summary.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,"")

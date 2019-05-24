@@ -13,7 +13,8 @@
 <div>
   <ul>
       <li *ngFor="let element of showName">
-          <table>
+          <img src={{element.image}}/>
+        <table class="table table-hover">
             <tr>
               <td>{{element.name}}</td>
             </tr>
@@ -29,6 +30,7 @@
             <tr>
               <td>{{element.summary}}</td>
             </tr>
+            
             <tr>
              
             </tr>
