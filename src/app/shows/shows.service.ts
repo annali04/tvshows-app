@@ -20,7 +20,7 @@ export class ShowsService {
 }
 
 private transformToIShowDetails(data: IShowDetailsData[]) : IShowDetails[] {
-  // console.log(JSON.stringify(data))
+
   var displayData = [];
   for (let i = 0; i < data.length; i++){
 
@@ -32,7 +32,8 @@ private transformToIShowDetails(data: IShowDetailsData[]) : IShowDetails[] {
       language: data[i].show.language,
       summary: data[i].show.summary.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,"")
     };
-    
+    // console.log(JSON.stringify("medium: "+data[i].show.image.medium))
+    // console.log(JSON.stringify("newData "+newData.image))
     displayData.push(newData);
 }
   return displayData;
