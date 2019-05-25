@@ -14,30 +14,36 @@
   <ul>
       <li *ngFor="let element of showName">
           <table>
+            <div id="image">
             <tr>
-                <td><img [src]="element.image" alt="image"></td>
+              <td><img [src]="element.image" alt="image" class="image"></td>
             </tr>
+          </div>
+          <div>
             <tr>
+              <th>Name</th>
               <td>{{element.name}}</td>
             </tr>
             <tr>
+                <th>Language</th>
               <td>{{element.language}}</td>
             </tr>
             <tr>
+              <th>Genres</th>
               <td>{{element.genres}}</td>
             </tr>
             <tr>
+                <th>Rating</th>
               <td>{{element.rating}}</td>
             </tr>
             <tr>
+              <th>Summary</th>
               <td>{{element.summary}}</td>
             </tr>
-            <tr>
-             
-            </tr>
+          </div>
             <tr><br></tr>
+
             </table>
           </li>
   </ul>
 </div>
-

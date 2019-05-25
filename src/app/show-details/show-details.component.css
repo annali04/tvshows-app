@@ -35,3 +35,7 @@
     clear: both;
     display: table;
   }
+  /* Float image to the left and rest of details next to it */
+  #image {
+    float: left;
+  }
