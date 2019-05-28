@@ -12,35 +12,52 @@ import { ViewChild } from '@angular/core'
 @Component({
   selector: 'app-show-details',
   templateUrl: './show-details.component.html',
-  styleUrls: ['./show-details.component.css']
+  styleUrls: ['./show-details.component.css'],
+  
 })
 
 export class ShowDetailsComponent implements OnInit {
   showName: IShowDetails[]
-  @ViewChild('query') queryInput: ElementRef;
-  query=''
+   @ViewChild('query') queryInput: ElementRef;
+   query=''
+   querySearch:string
+   pic:string
 
-  someFunction(){
-    let event = new KeyboardEvent('keyup',{'bubbles':true});
-    this.queryInput.nativeElement.dispatchEvent(event);
-  }
   
-   onKeyup(event){
-     this.query=event.target.value;
-     console.log(event)
-     console.log(JSON.stringify(this.query))
-     this.runService()
-   }
+  // someFunction(){
+  //   let event = new KeyboardEvent('keyup',{'bubbles':true});
+  //   this.queryInput.nativeElement.dispatchEvent(event);
+  // }
+  
+  //  onKeyup(event){
+  //    this.query=event.target.value;
+  //    console.log(event)
+  //    console.log(JSON.stringify(this.query))
+  //    this.runService()
+  //  }
+   
+  onClick(){
+    console.log("in onclickme function"+this.querySearch)
+    this.query=this.querySearch
+    console.log(JSON.stringify("this.query: "+this.query));
+    this.showsService.getShowDetails(this.query).subscribe(data => this.showName = data);
+    console.log(JSON.stringify("this.showName: "+ this.showName));
 
-  constructor(private showsService: ShowsService,private el:ElementRef) {
+    
+  }
+
+  constructor(private showsService: ShowsService) {
     }
   
-  runService(){
-    // console.log(JSON.stringify('ngonit'+this.query));
-    this.showsService.getShowDetails(this.query).subscribe(data => this.showName = data);
-    // console.log(JSON.stringify(this.showName));
-  }
+  // runService(){
+  //   // console.log(JSON.stringify('ngonit'+this.query));
+  //   console.log(JSON.stringify("query passed in: "+this.query));
+  //   this.showsService.getShowDetails(this.query).subscribe(data => this.showName = data);
+  //   console.log(JSON.stringify(this.showName));
+  // }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    // this.showsService.getShowDetails(this.query).subscribe(data => this.showName = data);
+  }
 
 }
