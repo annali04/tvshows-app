@@ -13,33 +13,39 @@
 <div>
   <ul>
       <li *ngFor="let element of showName">
-          <img src={{element.image}}/>
-        <table class="table table-hover">
+          <table>
+            <div id="image">
             <tr>
-                <td><img [src]="element.image" alt='https://ik.imagekit.io/demo/img/tr:di-medium_cafe_B1iTdD0C.jpg/non_existent_image.jpg'></td>
+              <td><img [src]="element.image" alt="image" class="image"></td>
+
             </tr>
+          </div>
+          <div>
             <tr>
+              <th>Name</th>
               <td>{{element.name}}</td>
             </tr>
             <tr>
+                <th>Language</th>
               <td>{{element.language}}</td>
             </tr>
             <tr>
+              <th>Genres</th>
               <td>{{element.genres}}</td>
             </tr>
             <tr>
+                <th>Rating</th>
               <td>{{element.rating}}</td>
             </tr>
             <tr>
+              <th>Summary</th>
               <td>{{element.summary}}</td>
             </tr>
-            
-            <tr>
-             
-            </tr>
+          </div>
+
             <tr><br></tr>
+
             </table>
           </li>
   </ul>
 </div>
-
