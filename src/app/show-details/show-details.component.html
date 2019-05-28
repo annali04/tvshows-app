@@ -2,9 +2,9 @@
 
 <div>
   <form class="example">
-    <input type="text" placeholder="" id="query" (keyup)="onKeyup($event)" #query>
-    <button type="submit">
-      <i class="fas fa-search"></i> 
+    <!-- <input type="text" placeholder="" id="query" (keyup)="onKeyup($event)" #query> -->
+    <input type="text" placeholder="" id="querySearch" name="quearySearch" [(ngModel)] = "querySearch">
+    <button (click)="onClick()">
         Search
      </button>
   </form> 
@@ -17,6 +17,7 @@
             <div id="image">
             <tr>
               <td><img [src]="element.image" alt="image" class="image"></td>
+
             </tr>
           </div>
           <div>
@@ -41,6 +42,7 @@
               <td>{{element.summary}}</td>
             </tr>
           </div>
+
             <tr><br></tr>
 
             </table>
