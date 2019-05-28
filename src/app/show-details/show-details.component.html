@@ -13,7 +13,8 @@
 <div>
   <ul>
       <li *ngFor="let element of showName">
-          <table>
+          <img src={{element.image}}/>
+        <table class="table table-hover">
             <tr>
                 <td><img [src]="element.image" alt='https://ik.imagekit.io/demo/img/tr:di-medium_cafe_B1iTdD0C.jpg/non_existent_image.jpg'></td>
             </tr>
@@ -32,6 +33,7 @@
             <tr>
               <td>{{element.summary}}</td>
             </tr>
+            
             <tr>
              
             </tr>
