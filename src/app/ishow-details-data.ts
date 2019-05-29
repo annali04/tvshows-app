@@ -10,6 +10,13 @@ export interface IShowDetailsData {
             medium:string
         }
         summary:string
+        id: number
+    },
+    person: {
+        name: string
+        image: {
+            medium:string
+        }        
     },
    
 }
