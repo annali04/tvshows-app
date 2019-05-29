@@ -5,4 +5,10 @@ export interface IShowDetails {
     rating: number
     language: string
     summary: string
+    showId: number
+    cast: {
+        name: string
+        image: object
+    }[]
+ 
 }
