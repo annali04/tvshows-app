@@ -1,4 +1,12 @@
-.header {
-    text-align: "left";
-    
+.navbar{
+    position:relative;
+    width:auto;
+    height:auto;
+    background-color: rgb(3, 3, 3); 
+    }
+
+.bg-primary {
+    background-color: rgb(3, 3, 3)!important;
 }
+
+

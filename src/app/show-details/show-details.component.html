@@ -2,44 +2,71 @@
 
 <div>
   <form class="example">
-    <input type="text" placeholder="" id="query" (keyup)="onKeyup($event)" #query>
-    <button type="submit">
-      <i class="fas fa-search"></i> 
-        Search
-     </button>
-  </form> 
+    <!-- <input type="text" placeholder="" id="query" (keyup)="onKeyup($event)" #query> -->
+    <input
+      type="text"
+      placeholder=""
+      id="querySearch"
+      name="quearySearch"
+      [(ngModel)]="querySearch"
+    />
+    <button (click)="onClick()">
+      Search
+    </button>
+  </form>
 </div>
 
 <div>
   <ul>
-      <li *ngFor="let element of showName">
-          <img src={{element.image}}/>
-        <table class="table table-hover">
-            <tr>
-                <!-- <td><img [src]="element.image" alt="image"></td> -->
-            </tr>
-            <tr>
-              <td>{{element.name}}</td>
-            </tr>
-            <tr>
-              <td>{{element.language}}</td>
-            </tr>
-            <tr>
-              <td>{{element.genres}}</td>
-            </tr>
-            <tr>
-              <td>{{element.rating}}</td>
-            </tr>
-            <tr>
-              <td>{{element.summary}}</td>
-            </tr>
-            
-            <tr>
-             
-            </tr>
-            <tr><br></tr>
-            </table>
-          </li>
+    <li *ngFor="let element of showName">
+      <div class="row">
+        <div id="image" class="col-lg-2">
+          <tr>
+            <td><img [src]="element.image" alt="image" class="image" /></td>
+          </tr>
+        </div>
+
+        <div class="col-lg-9 col-md-10">
+          <div class="row">
+            <h5>Name</h5>
+            <span>{{ element.name }}</span>
+          </div>
+          <div class="row">
+            <h5>Language</h5>
+            <span>{{ element.language }}</span>
+          </div>
+
+          <div class="row">
+            <h5>Genres</h5>
+            <span>{{ element.genres }}</span>
+          </div>
+          <div class="row">
+            <h5>Rating</h5>
+            <span>{{ element.rating }}</span>
+          </div>
+          <div class="row">
+            <h5>Summary</h5>
+            <span>{{ element.summary }}</span>
+          </div>
+
+          <div class="row"><h5>Top Series Cast</h5></div>
+
+          <div class="row">
+            <ul>
+                  <li *ngFor="let ele of element.cast">
+                    <div class="col-lg-3 col-md-3" >
+                  <div>{{ ele.name }}</div>
+                  <img [src]="ele.image" alt="image" class="image img-resize" />
+                </div>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+        <br />
+      
+    </li>
   </ul>
 </div>
-
