@@ -1,54 +1,63 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  /* Style the search field */
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid grey;
-    float: left;
-    width: 200px;
-    background: #f1f1f1;
-  }
-  
-  /* Style the submit button */
-  form.example button {
-    float: left;
-    width: 100px;
-    padding: 10px;
-    background: #2196F3;
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; /* Prevent double borders */
-    cursor: pointer;
-  }
-  
-  form.example button:hover {
-    background: #0b7dda;
-  }
-  
-  /* Clear floats */
-  form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  /* Float image to the left and rest of details next to it */
-  #image {
-    float: left;
-  }
+  box-sizing: border-box;
+}
 
-  .img-resize {
-    max-width:150%;
-    max-height:150%;
-    overflow: hidden;
-  }
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 200px;
+  background: #f1f1f1;
+  font-family: Arial;
+}
 
-  ul {
-    list-style-type: none;
-    list-style: none;
-  }
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 100px;
+  padding: 10px;
+  background: #985E6D;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
 
-  
+form.example button:hover {
+  background: #985E6D;
+}
+
+/* Search field position */
+.example {
+  padding: 0 30px 30px 20px;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Float image to the left and rest of details next to it */
+#image {
+  float: left;
+}
+
+.img-resize {
+  max-width:150%;
+  max-height:150%;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  list-style: none;
+}
+
+* {
+  font-family: Arial;
+}
+

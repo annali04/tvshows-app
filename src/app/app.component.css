@@ -10,3 +10,14 @@
 }
 
 
+.navbar-brand {
+    font-size: 30px;
+  }
+
+* {
+    border-radius: 0 !important;
+  }
+
+.navbar {
+    background-color: #192231 !important;
+}
