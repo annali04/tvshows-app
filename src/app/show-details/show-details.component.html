@@ -1,5 +1,5 @@
 <!-- <h1>TVShows App</h1> -->
-
+<body>
 <div>
   <form class="example">
     <!-- <input type="text" placeholder="" id="query" (keyup)="onKeyup($event)" #query> -->
@@ -16,22 +16,22 @@
   </form>
 </div>
 
-<div>
-  <ul>
-    <li *ngFor="let element of showName">
-      <div class="row">
-        <div id="image" class="col-lg-2">
-          <tr>
-            <td><img [src]="element.image" alt="image" class="image" /></td>
-          </tr>
-        </div>
 
-        <div class="col-lg-10 col-md-10">
+<div id="content" class="container">
+  <ul>
+    <li *ngFor="let element of showName" class="col-lg-3 col-md-4 col-s-12 col-xs-12">
+      <div class="row">
+        <div id="image" >
+            <img [src]="element.image" alt="image" class="image" />
+        </div>
+        <br/>
+
+        <!-- <div class="col-lg-10 col-md-10 col-xs-12">
           <div class="row">
-            <h5 class="col-lg-1">Name</h5>
-            <span class="col-lg-9 text-details">{{ element.name }}</span>
-          </div>
-          <div class="row">
+            <h5 class="col-lg-1 col-xs-3"><b>Name</b>  </h5>
+            <span class="col-lg-9 col-x3-9 text-details">{{ element.name }}</span>
+          </div> -->
+          <!-- <div class="row">
             <h5 class="col-lg-1">Language</h5>
             <span class="col-lg-9 text-details">{{ element.language }}</span>
           </div>
@@ -47,26 +47,28 @@
           <div class="row">
             <h5 class="col-lg-1">Summary</h5>
             <span class="col-lg-9 text-details">{{ element.summary }}</span>
-          </div>
+          </div> -->
 
-          <div class="row"><h5 class="col-lg-2">Top Series Cast</h5></div>
+          <!-- <div class="row"><h5 class="col-lg-2 col-xs-12">Top Series Cast</h5></div>
 
           <div class="row">
             <ul>
-                  <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12">
+                  <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12 ">
                     <div class="col-lg-3 col-md-3" >
                   <div>{{ ele.name }}</div>
                   <img [src]="ele.image" alt="image" class="image img-resize" />
                 </div>
                 </li>
-              
+               -->
+<!--       
+               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-     
-        <br />
+          </div> -->
       
+     
+      </div>
     </li>
   </ul>
 </div>
+
+</body>

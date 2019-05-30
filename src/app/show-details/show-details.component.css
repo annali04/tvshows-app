@@ -42,8 +42,9 @@ form.example::after {
   display: table;
 }
 /* Float image to the left and rest of details next to it */
-#image {
-  /* float: left; */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .img-resize {
@@ -68,3 +69,18 @@ h5 {
    text-align: left;
    font-size: 12px;
  }
+
+ body{
+	width:100%;
+	margin:auto;
+}
+#wrapper{
+	display:block;
+	width:100%;
+	margin:auto;
+}
+#content{
+	display:block;
+	width:100%;
+	margin:auto;
+}
