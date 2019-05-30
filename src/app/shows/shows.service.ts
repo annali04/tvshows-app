@@ -90,7 +90,16 @@ export class ShowsService {
   private transformCastDetails(data: IShowDetails, cast: IShowDetailsData[]): IShowDetails {
     var castData = [];
     //var showData: IShowDetails;
-    for (let i = 0; i < cast.length; i++) {
+    var castLen = 0;
+    if (cast != null){
+      if (cast.length > 4){
+        castLen = 4;
+      }
+      else{
+        castLen = cast.length;
+      }
+    }
+    for (let i = 0; i < castLen; i++) {
       var nameTemp = cast[i].person.name != null ? cast[i].person.name : "";
       var imageTemp = cast[i].person.image != null ? cast[i].person.image.medium : "";      
       
