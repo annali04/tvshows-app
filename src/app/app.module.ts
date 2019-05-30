@@ -7,6 +7,7 @@ import { ShowsService } from './shows/shows.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StarRatingModule } from 'angular-star-rating';
 //import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 //import { HttpModule } from '@angular/http';
 
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    // StarRatingModule.forRoot(),
     // MatInputModule,
     // ReactiveFormsModule,
     // MatAutocompleteModule,
