@@ -43,12 +43,12 @@ form.example::after {
 }
 /* Float image to the left and rest of details next to it */
 #image {
-  float: left;
+  /* float: left; */
 }
 
 .img-resize {
-  max-width:150%;
-  max-height:150%;
+  max-width:300%;
+  max-height:300%;
   overflow: hidden;
 }
 
@@ -61,3 +61,10 @@ ul {
   font-family: Arial;
 }
 
+h5 {
+  padding-right: 5px;
+}
+.text-details {
+   text-align: left;
+   font-size: 12px;
+ }
