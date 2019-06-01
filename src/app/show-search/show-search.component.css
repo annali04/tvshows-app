@@ -1,0 +1,38 @@
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 200px;
+    background: #f1f1f1;
+    font-family: Arial;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 100px;
+    padding: 10px;
+    background: #985E6D;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #985E6D;
+  }
+  
+  /* Search field position */
+  .example {
+    padding: 0 30px 30px 20px;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
