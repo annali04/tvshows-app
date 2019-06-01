@@ -61,9 +61,12 @@ export class ShowsService {
       var nameTemp = data[i].show.name != null ? data[i].show.name : "";
       var genresTemp = data[i].show.genres != null ? data[i].show.genres : "";
       var imageTemp =
-        data[i].show.image != null ? data[i].show.image.medium : "";
+        data[i].show.image != null ? data[i].show.image.medium : "../assets/popcorn.jpg";
       var ratingTemp =
         data[i].show.rating.average != null ? data[i].show.rating.average : "";
+        if (ratingTemp === "") {
+          ratingTemp= "-";
+        }
       var languageTemp =
         data[i].show.language != null ? data[i].show.language : "";
       var summaryTemp =
