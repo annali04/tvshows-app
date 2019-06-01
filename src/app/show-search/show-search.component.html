@@ -1,3 +1,16 @@
-<p>
-  show-search works!
-</p>
+
+
+<div>
+    <form class="example">
+      <input
+        type="text"
+        placeholder=""
+        id="querySearch"
+        name="quearySearch"
+        [(ngModel)]="querySearch"
+      />
+      <button (click)="onClick()">
+        Search
+      </button>
+    </form>
+  </div>
