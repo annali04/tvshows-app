@@ -7,6 +7,8 @@ import { ShowsService } from './shows/shows.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShowSearchComponent } from './show-search/show-search.component';
+import { SingleShowDetailsComponent } from './single-show-details/single-show-details.component';
 //import { StarRatingModule } from 'angular-star-rating';
 //import { MatAutocompleteModule, MatInputModule } from '@angular/material';
 //import { HttpModule } from '@angular/http';
@@ -14,7 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    ShowDetailsComponent
+    ShowDetailsComponent,
+    ShowSearchComponent,
+    SingleShowDetailsComponent
   ],
   imports: [
     BrowserModule,
