@@ -23,15 +23,14 @@
       <div class="column column-block">
         <div class="card primary grid-x">
         <figure id="image" class="image small-12 cell">
-            <img [src]="element.image" alt="image" class="image" onError="this.src='../assets/popcorn.png'"  alt="popcorn" />   
+            <img [src]="element.image" alt="image" class="image" onError="this.src='../assets/popcorn.jpg'"  alt="popcorn" />   
         </figure>
-        <div class="content auto cell" id="footer">
+        <div class="content small-12 cell" id="footer">
             <span class="title">
               <div>{{ element.name }}</div>
             </span>
             <footer class="rating">
-              <div>★ {{ element.rating }} </div>
-                  
+              <div>★ {{ element.rating }} </div> 
             </footer>
         </div>
         </div>
@@ -82,6 +81,5 @@
       </div>
     </li>
   </ul>
-</div>
-
+  </div>
 </body>
