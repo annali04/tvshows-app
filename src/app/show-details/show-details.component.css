@@ -120,3 +120,8 @@ figure {
       display: block;
       margin: auto;
   } */
+
+  #background {
+    display: none !important;
+    visibility: hidden !important;
+  }
