@@ -40,6 +40,7 @@ export class ShowDetailsComponent implements OnInit {
       .getShowDetails(this.query)
       .subscribe(data => (this.showName = data));
     console.log(JSON.stringify("this.showName: " + this.showName));
+     
   }
 
   constructor(private showsService: ShowsService) {}
