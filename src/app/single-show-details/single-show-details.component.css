@@ -1,0 +1,23 @@
+.navbar{
+    position:relative;
+    width:auto;
+    height:auto;
+    background-color: rgb(3, 3, 3); 
+    }
+
+.bg-primary {
+    background-color: rgb(3, 3, 3)!important;
+}
+
+
+.navbar-brand {
+    font-size: 30px;
+  }
+
+* {
+    border-radius: 0 !important;
+  }
+
+.navbar {
+    background-color: #192231 !important;
+}
