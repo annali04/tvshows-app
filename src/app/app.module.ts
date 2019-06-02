@@ -8,9 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowSearchComponent } from './show-search/show-search.component';
 import { AppRoutingModule } from './app-routing.module';
-//import { StarRatingModule } from 'angular-star-rating';
-//import { MatAutocompleteModule, MatInputModule } from '@angular/material';
-//import { HttpModule } from '@angular/http';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -23,12 +22,10 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    // StarRatingModule.forRoot(),
-    // MatInputModule,
-    // ReactiveFormsModule,
-    // MatAutocompleteModule,
     FormsModule,
-    // HttpModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [ShowsService],
   bootstrap: [AppComponent]

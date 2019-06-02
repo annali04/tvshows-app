@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from "@angular/core";
+import { Component, OnInit, ElementRef, Input } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import { IShowDetails } from "../ishow-details";
 import { ShowsService } from "../shows/shows.service";
@@ -14,8 +14,7 @@ import { ViewChild } from "@angular/core";
   styleUrls: ["./show-details.component.css"]
 })
 export class ShowDetailsComponent implements OnInit {
-  showName: IShowDetails[];
-  @ViewChild("query") queryInput: ElementRef;
+  @Input() showName: IShowDetails[];
   query = "";
   querySearch: string;
   pic: string;
@@ -32,16 +31,16 @@ export class ShowDetailsComponent implements OnInit {
   //    this.runService()
   //  }
 
-  onClick() {
-    console.log("in onclickme function" + this.querySearch);
-    this.query = this.querySearch;
-    console.log(JSON.stringify("this.query: " + this.query));
-    this.showsService
-      .getShowDetails(this.query)
-      .subscribe(data => (this.showName = data));
-    console.log(JSON.stringify("this.showName: " + this.showName));
+  // onClick() {
+  //   console.log("in onclickme function" + this.querySearch);
+  //   this.query = this.querySearch;
+  //   console.log(JSON.stringify("this.query: " + this.query));
+  //   this.showsService
+  //     .getShowDetails(this.query)
+  //     .subscribe(data => (this.showName = data));
+  //   console.log(JSON.stringify("this.showName: " + this.showName));
      
-  }
+  // }
 
 
   constructor(private showsService: ShowsService) {}
