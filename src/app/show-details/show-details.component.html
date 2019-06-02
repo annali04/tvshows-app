@@ -29,66 +29,70 @@
 <div id="content" class="container no-padding">
   <ul>
     <li *ngFor="let element of showName" class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-      <div class="column column-block">
-        <div class="card primary grid-x">
-        <figure id="image" class="image small-12 cell">
-            <img [src]="element.image" alt="image" class="image" />   
-        </figure>
-        <div class="content small-12 cell" id="footer">
-            <span class="title">
-              <div>{{ element.name }}</div>
-            </span>
-            <footer class="rating">
-              <div>★ {{ element.rating }} </div> 
-            </footer>
-        </div>
-        </div>
-        <!-- <figcaption id="showCaption">{{ element.name }} ★ {{ element.rating }}</figcaption> -->
-        <br/>
-
-
-        <!-- <div class="col-lg-10 col-md-10 col-xs-12">
-          <div class="row">
-            <h5 class="col-lg-1 col-xs-3"><b>Name</b>  </h5>
-            <span class="col-lg-9 col-x3-9 text-details">{{ element.name }}</span>
-          </div> -->
-          <!-- <div class="row">
-            <h5 class="col-lg-1">Language</h5>
-            <span class="col-lg-9 text-details">{{ element.language }}</span>
+      <a [routerLink]="['/single-show-details', element.showId]" routerLinkActive="active">
+        <div class="column column-block">
+          <div class="card primary grid-x">
+          <figure id="image" class="image small-12 cell">
+              <img [src]="element.image" alt="image" class="image" />   
+          </figure>
+          <div class="content small-12 cell" id="footer">
+              <span class="title">
+                <div>{{ element.name }}</div>
+              </span>
+              <footer class="rating">
+                <div>★ {{ element.rating }} </div> 
+              </footer>
           </div>
-
-          <div class="row">
-            <h5 class="col-lg-1">Genres</h5>
-            <span class="col-lg-9 text-details">{{ element.genres ? element.genres.join(', ') : ''}}</span>
           </div>
-          <div class="row">
-            <h5 class="col-lg-1">Rating</h5>
-            <span class="col-lg-9 text-details">{{ element.rating }}</span>
-          </div>
-          <div class="row">
-            <h5 class="col-lg-1">Summary</h5>
-            <span class="col-lg-9 text-details">{{ element.summary }}</span>
-          </div> -->
+          
+          <!-- <figcaption id="showCaption">{{ element.name }} ★ {{ element.rating }}</figcaption> -->
+          <br/>
 
-          <!-- <div class="row"><h5 class="col-lg-2 col-xs-12">Top Series Cast</h5></div>
 
-          <div class="row">
-            <ul>
-                  <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12 ">
-                    <div class="col-lg-3 col-md-3" >
-                  <div>{{ ele.name }}</div>
-                  <img [src]="ele.image" alt="image" class="image img-resize" />
-                </div>
+          <!-- <div class="col-lg-10 col-md-10 col-xs-12">
+            <div class="row">
+              <h5 class="col-lg-1 col-xs-3"><b>Name</b>  </h5>
+              <span class="col-lg-9 col-x3-9 text-details">{{ element.name }}</span>
+            </div> -->
+            <!-- <div class="row">
+              <h5 class="col-lg-1">Language</h5>
+              <span class="col-lg-9 text-details">{{ element.language }}</span>
+            </div>
+
+            <div class="row">
+              <h5 class="col-lg-1">Genres</h5>
+              <span class="col-lg-9 text-details">{{ element.genres ? element.genres.join(', ') : ''}}</span>
+            </div>
+            <div class="row">
+              <h5 class="col-lg-1">Rating</h5>
+              <span class="col-lg-9 text-details">{{ element.rating }}</span>
+            </div>
+            <div class="row">
+              <h5 class="col-lg-1">Summary</h5>
+              <span class="col-lg-9 text-details">{{ element.summary }}</span>
+            </div> -->
+
+            <!-- <div class="row"><h5 class="col-lg-2 col-xs-12">Top Series Cast</h5></div>
+
+            <div class="row">
+              <ul>
+                    <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12 ">
+                      <div class="col-lg-3 col-md-3" >
+                    <div>{{ ele.name }}</div>
+                    <img [src]="ele.image" alt="image" class="image img-resize" />
+                  </div>
+                  </li>
+                -->
+  <!--       
                 </li>
-               -->
-<!--       
-               </li>
-            </ul>
-          </div> -->
+              </ul>
+            </div> -->
+        
       
-     
-      </div>
+        </div>
+      </a>
     </li>
   </ul>
   </div>
 </body>
+<router-outlet></router-outlet>

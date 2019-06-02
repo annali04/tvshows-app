@@ -49,7 +49,40 @@ export class ShowsService {
           }
           return of([]);
         })
-      );
+      )}
+
+      getShowById(showId: string) {
+        return this.httpClient
+          .get<IShowDetailsData[]>(
+            `${
+              environment.baseUrl
+            }api.tvmaze.com/search/shows/${showId}?&appid=${environment.appId}`
+          )
+          .pipe(map(data => this.transformToIShowDetails(data)))
+          .pipe(
+            flatMap((shows: any[]) => {
+              if (shows.length > 0) {
+                return forkJoin(
+                  shows.map((show: any) => {
+                    return this.httpClient
+                      .get(
+                        `${environment.baseUrl}api.tvmaze.com/shows/${
+                          show.showId
+                        }/cast?appid=${environment.appId}`
+                      )
+                      .pipe(
+                        map((res: any) => {
+                          let cast: any = res;
+                          show = this.transformCastDetails(show, cast); 
+                          return show;
+                        })
+                      );
+                  })
+                );
+              }
+              return of([]);
+            })
+          );
   }
 
   // This function fetches the primary details along with the cast details for a particular show

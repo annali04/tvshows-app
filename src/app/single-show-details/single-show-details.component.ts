@@ -1,6 +1,11 @@
+import { switchMap } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { ShowsService } from "../shows/shows.service";
-import { IShowDetails } from '../ishow-details';
+import { Observable, observable } from "rxjs";
+import { IShowDetails } from "../ishow-details";
+import { IShowDetailsData } from '../ishow-details-data';
+
 
 @Component({
   selector: 'app-single-show-details',
@@ -8,12 +13,23 @@ import { IShowDetails } from '../ishow-details';
   styleUrls: ['./single-show-details.component.css']
 })
 export class SingleShowDetailsComponent implements OnInit {
+//   showDetail$: Observable<IShowDetails[]>;
   showDetails: IShowDetails;
-  constructor(private showsService: ShowsService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router, 
+    private showsService: ShowsService) { }
 
   ngOnInit() {
+    let id = this.route.snapshot.paramMap.get('id');
+    console.log("Show to find details: " + id);
+    this.showsService.getSingleShowDetails(id).subscribe(data => (this.showDetails = data));     
+//     this.showDetail$ = this.showsService.getShowById(id);
+//   showDetails: IShowDetails;
+//   constructor(private showsService: ShowsService) { }
+//   ngOnInit() {
     //TBD: Replace Show Id.
-    this.showsService.getSingleShowDetails('540').subscribe(data => (this.showDetails = data));     
+//     this.showsService.getSingleShowDetails('540').subscribe(data => (this.showDetails = data));     
   }
 
 }
