@@ -10,11 +10,9 @@ import { debounceTime, map } from 'rxjs/operators';
 })
 
 export class ShowSearchComponent implements OnInit {
-
+  @Output() searchEvent =new EventEmitter<string>();
   search = new FormControl();
   
-  @Output() searchEvent =new EventEmitter<string>();
-
   constructor() { }
 
   ngOnInit() {

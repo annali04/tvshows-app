@@ -18,6 +18,7 @@ import { ISingleShowDetailsData } from '../isingle-show-details-data';
 export class ShowsService {
   constructor(private httpClient: HttpClient) {}
 
+  // This function fetches the primary details along with the cast details for a list of show matching the search word
   getShowDetails(showName: string) {
     return this.httpClient.get<IShowDetailsData[]>(`${environment.baseUrl}api.tvmaze.com/search/shows?q=${showName}&appid=${environment.appId}`).pipe(map(data => this.transformToIShowDetails(data)))
     }
