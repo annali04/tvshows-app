@@ -3,7 +3,7 @@
 } */
 
 /* Style the search field */
-form.example input[type=text] {
+#querySearch {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -14,10 +14,10 @@ form.example input[type=text] {
 }
 
 /* Style the submit button */
-form.example button {
-  float: left;
+.btn {
+  /* float: left; */
   width: 100px;
-  padding: 10px;
+  /* padding: 10px; */
   background: #985E6D;
   color: white;
   font-size: 17px;
@@ -31,9 +31,9 @@ form.example button:hover {
 }
 
 /* Search field position */
-.example {
+/* .example {
   padding: 0 30px 30px 20px;
-}
+} */
 
 /* Clear floats */
 form.example::after {
@@ -106,17 +106,54 @@ figure {
     text-align: right;
   }
 
-  .container-fluid {
+  .container {
     padding-right:0;
     padding-left:0;
-    margin-right:auto;
-    margin-left:auto
+    margin-right:0;
+    margin-left:0;
+    margin-top: 30px;
+    position: absolute;
  }
 
-  
+ .no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
   /* .banner img {
       max-width: 100%;
       text-align: center;
       display: block;
       margin: auto;
   } */
+
+  #background {
+    display: none !important;
+    visibility: hidden !important;
+    position: relative;
+  }
+
+  .navbar{
+    position:relative;
+    width:auto;
+    height:auto;
+    background-color: rgb(3, 3, 3); 
+    margin-bottom: 0;
+    }
+
+.bg-primary {
+    background-color: rgb(3, 3, 3)!important;
+}
+
+
+.navbar-brand {
+    font-size: 30px;
+  }
+
+* {
+    border-radius: 0 !important;
+  }
+
+.navbar {
+    background-color: #192231 !important;
+}
