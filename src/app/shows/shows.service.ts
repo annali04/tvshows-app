@@ -108,7 +108,7 @@ export class ShowsService {
     var displayData = [];
     for (let i = 0; i < data.length; i++) {
       var nameTemp = data[i].show.name != null ? data[i].show.name : "";
-      var genresTemp = data[i].show.genres != null ? data[i].show.genres : "";
+      // var genresTemp = data[i].show.genres != null ? data[i].show.genres : "";
       var imageTemp =
         data[i].show.image != null
           ? data[i].show.image.medium
@@ -118,24 +118,24 @@ export class ShowsService {
       if (ratingTemp === "") {
         ratingTemp = "-";
       }
-      var languageTemp =
-        data[i].show.language != null ? data[i].show.language : "";
-      var summaryTemp =
-        data[i].show.summary != null
-          ? data[i].show.summary.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, "")
-          : "";
+      // var languageTemp =
+      //   data[i].show.language != null ? data[i].show.language : "";
+      // var summaryTemp =
+      //   data[i].show.summary != null
+      //     ? data[i].show.summary.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, "")
+      //     : "";
 
       let newData = {
         showId: data[i].show.id,
         name: nameTemp,
-        genres: genresTemp,
+        // genres: genresTemp,
         image: imageTemp,
         rating: ratingTemp,
-        language: languageTemp,
-        summary: summaryTemp
+        // language: languageTemp,
+        // summary: summaryTemp
       };
       // console.log(JSON.stringify("medium: "+data[i].show.image.medium))
-      console.log(newData.language);
+      // console.log(newData.language);
       displayData.push(newData);
     }
     return displayData;

@@ -1,3 +1,36 @@
-  <div>{{showDetails.name}}</div>
-  <div>{{showDetails.cast[0].name}}</div>
+<div class="col-lg-10 col-md-10 col-xs-12">
+            <div class="row">
+              <h5 class="col-lg-1 col-xs-3"><b>Name</b>  </h5>
+              <span class="col-lg-9 col-x3-9 text-details">{{ showDetails.name }}</span>
+            </div> 
+            <div class="row">
+              <h5 class="col-lg-1">Language</h5>
+              <span class="col-lg-9 text-details">{{ showDetails.language }}</span>
+            </div>
 
+            <div class="row">
+              <h5 class="col-lg-1">Genres</h5>
+              <span class="col-lg-9 text-details">{{ showDetails.genres ? element.genres.join(', ') : ''}}</span>
+            </div>
+            <div class="row">
+              <h5 class="col-lg-1">Rating</h5>
+              <span class="col-lg-9 text-details">{{ showDetails.rating }}</span>
+            </div>
+            <div class="row">
+              <h5 class="col-lg-1">Summary</h5>
+              <span class="col-lg-9 text-details">{{ showDetails.summary }}</span>
+            </div> 
+
+            <!-- <div class="row"><h5 class="col-lg-2 col-xs-12">Cast</h5></div>
+
+            <div class="row">
+              <ul>
+                    <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12 ">
+                      <div class="col-lg-3 col-md-3" >
+                    <div>{{ ele.name }}</div>
+                    <img [src]="ele.image" alt="image" class="image img-resize" />
+                  </div>
+                  </li>
+                </li>
+              </ul>
+            </div> -->
