@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IShowDetails } from './ishow-details';
 import { ShowsService } from './shows/shows.service';
+import { DataStorageService } from './data-storage.service';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,17 @@ export class AppComponent {
 
   showName: IShowDetails[]
 
-  constructor(private showService: ShowsService){
+  constructor(private showService: ShowsService, private dataStorage: DataStorageService){
 
   }
 
   doSearch(searchValue){
     if(searchValue){
-      this.showService.getShowDetails(searchValue).subscribe(data=>this.showName=data)
+      this.showService.getShowDetails(searchValue).subscribe(data=>{
+        //this.showName=data; 
+        this.dataStorage.setResults(data);
+        console.log("In App Component", this.dataStorage.getResults())
+      })
     }
   }
 }
