@@ -9,13 +9,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowSearchComponent } from './show-search/show-search.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { DataStorageService } from './data-storage.service';
+import { SingleShowDetailsComponent } from './single-show-details/single-show-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowDetailsComponent,
-    ShowSearchComponent
+    ShowSearchComponent,
+    SingleShowDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
     MatFormFieldModule,
     MatInputModule,
   ],
-  providers: [ShowsService],
+  providers: [ShowsService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
