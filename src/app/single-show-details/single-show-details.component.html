@@ -1,12 +1,9 @@
-<div class="col-lg-10 col-md-10 col-xs-12">
-            <div class="row">
-              <h5 class="col-lg-1 col-xs-3"><b>Name</b>  </h5>
-              <span class="col-lg-9 col-x3-9 text-details">{{ showDetails.name }}</span>
-            </div> 
-            <div class="row">
-              <h5 class="col-lg-1">Language</h5>
-              <span class="col-lg-9 text-details">{{ showDetails.language }}</span>
-            </div>
+
+
+<div *ngIf="showDetails">
+  <div>{{showDetails.name}}</div>
+  <div>{{showDetails.cast[0].name}}</div>
+</div>
 
             <div class="row">
               <h5 class="col-lg-1">Genres</h5>
