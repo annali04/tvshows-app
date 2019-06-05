@@ -1,36 +1,43 @@
-<div class="col-lg-10 col-md-10 col-xs-12">
-            <div class="row">
-              <h5 class="col-lg-1 col-xs-3"><b>Name</b>  </h5>
-              <span class="col-lg-9 col-x3-9 text-details">{{ showDetails.name }}</span>
-            </div> 
-            <div class="row">
-              <h5 class="col-lg-1">Language</h5>
-              <span class="col-lg-9 text-details">{{ showDetails.language }}</span>
-            </div>
 
-            <div class="row">
-              <h5 class="col-lg-1">Genres</h5>
-              <span class="col-lg-9 text-details">{{ showDetails.genres ? element.genres.join(', ') : ''}}</span>
-            </div>
-            <div class="row">
-              <h5 class="col-lg-1">Rating</h5>
-              <span class="col-lg-9 text-details">{{ showDetails.rating }}</span>
-            </div>
-            <div class="row">
-              <h5 class="col-lg-1">Summary</h5>
-              <span class="col-lg-9 text-details">{{ showDetails.summary }}</span>
-            </div> 
+<h1>{{ showDetails?.name }}</h1>
+<div class="container-fluid">
+  <div class="row"></div>
+    <section id="image" class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+      <img src="../../assets/popcorn.jpg" alt="image" class="image" />
+    </section>
+    <div class="content col-lg-10 col-md-9 col-sm-6 col-xs-12">
+      <div class="row-fluid">
+        <span>Language: </span>
+        <span>{{ showDetails?.language }}</span>
+      </div>
+      <div class="row">
+        <span>Genres: </span>
+        <span>Placeholder genres</span>
+      </div>
+      <div class="row">
+        <span>Rating: </span>
+        <span>Placeholder ★ 9.0</span>
+      </div>
+      <div class="row">
+        <span>Summary: </span>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+      </div>
+      <div class="row"><span>Cast: </span></div>
+        <div class="row">
+          <ul>
+            <li>Cast 1</li>
+            <li>Cast 2</li>
+            <li>Cast 3</li>
+            <li>Cast 4</li>
+            <!-- <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12">
+              <div class="col-lg-3 col-md-3" >
+                <div>{{ ele.name }}</div>
+                <img src="ele.image" alt="image" class="image img-resize" />
+              </div>
+            </li>-->
+          </ul>
+        </div>
+    </div>
 
-            <!-- <div class="row"><h5 class="col-lg-2 col-xs-12">Cast</h5></div>
-
-            <div class="row">
-              <ul>
-                    <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12 ">
-                      <div class="col-lg-3 col-md-3" >
-                    <div>{{ ele.name }}</div>
-                    <img [src]="ele.image" alt="image" class="image img-resize" />
-                  </div>
-                  </li>
-                </li>
-              </ul>
-            </div> -->
+    
+      
