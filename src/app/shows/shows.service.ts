@@ -64,14 +64,28 @@ export class ShowsService {
   //  This function is used for transforming the data from JSON format(ISingleShowDetailsData) to HTML display format(IShowDetails)
   // These are primary details for a single show.
   private transformSingleShowDetails(data: ISingleShowDetailsData): IShowDetails {
+
+    var genresTemp =""
+    for (let i=0; i < data.genres.length; i++){
+      genresTemp = genresTemp.concat(data.genres[i]);
+      if (i < data.genres.length-1){
+        genresTemp = genresTemp.concat(", ");
+      }
+
+    } 
+    if (data.image == null) {
+      data.image = { 
+        medium: "../assets/popcorn.jpg"}
+    }
+
       var displayData = {
         showId: data.id,
         name: data.name != null ? data.name : "",
-        genres: data.genres[0] != null ? data.genres[0] : "",
-        image: data.image, //!= null ? data.image.medium : "../assets/popcorn.jpg",
-        rating: data.rating.average, //!= null ? data.rating.average : "",
+        genres: genresTemp,//: data.genres[0] != null ? data.genres[0] : "",
+        image: data.image,
+        rating: data.rating.average, //!= null ? data.rating.average : ""
         language: data.language != null ? data.language : "",
-        summary: data.summary != null ? data.summary : "",
+        summary: data.summary.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, ""),
         cast: null
       }
       console.log("name==",displayData);
@@ -82,6 +96,7 @@ export class ShowsService {
   //  This function is used for transforming the data from JSON format(IShowDetailsData[]) to HTML display format(IShowDetails[])
   // These are details for all shows that match the search criteria.  
   private transformToIShowDetails(data: IShowDetailsData[]): IShowDetails[] {
+    
     var displayData = [];
     for (let i = 0; i < data.length; i++) {
       var nameTemp = data[i].show.name != null ? data[i].show.name : "";

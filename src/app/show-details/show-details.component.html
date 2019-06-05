@@ -1,15 +1,15 @@
 
 
-<div id="content" class="container no-padding">
+<div id="content" class="container-fluid no-padding">
   <ul>
     <li *ngFor="let element of showName" class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
       <a [routerLink]="['/single-show-details', element.showId]" routerLinkActive="active">
         <div class="column column-block">
           <div class="card primary grid-x">
-          <figure id="image" class="image small-12 cell">
+          <figure id="image" class="image small-6 cell">
               <img [src]="element.image" alt="image" class="image" />   
           </figure>
-          <div class="content small-12 cell" id="footer">
+          <div class="content small-6 cell" id="footer">
               <span class="title">
                 <div>{{ element.name }}</div>
               </span>
