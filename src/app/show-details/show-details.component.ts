@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, Input } from "@angular/core";
 import { IShowDetails } from "../ishow-details";
 import { ShowsService } from "../shows/shows.service";
+import { DataStorageService } from '../data-storage.service';
 
 @Component({
   selector: "app-show-details",
@@ -8,10 +9,14 @@ import { ShowsService } from "../shows/shows.service";
   styleUrls: ["./show-details.component.css"]
 })
 export class ShowDetailsComponent implements OnInit {
-  @Input() showName: IShowDetails[];
-
-  constructor(private showsService: ShowsService) {}
+  //@Input() showName: IShowDetails[];
+  showName: IShowDetails[];
+  constructor(private showsService: ShowsService, private dataStorage: DataStorageService) {
+    this.dataStorage.getResults()
+    .subscribe(data => this.showName = data)
+  }
 
   ngOnInit() {
+  
   }
 }
