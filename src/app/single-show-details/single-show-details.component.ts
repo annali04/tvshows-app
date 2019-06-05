@@ -13,7 +13,6 @@ import { IShowDetailsData } from '../ishow-details-data';
   styleUrls: ['./single-show-details.component.css']
 })
 export class SingleShowDetailsComponent implements OnInit {
-//   showDetail$: Observable<IShowDetails[]>;
   showDetails: IShowDetails;
   constructor(
     private route: ActivatedRoute, 
@@ -24,12 +23,6 @@ export class SingleShowDetailsComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('id');
     console.log("Show to find details: " + id);
     this.showsService.getSingleShowDetails(id).subscribe(data => (this.showDetails = data));     
-//     this.showDetail$ = this.showsService.getShowById(id);
-//   showDetails: IShowDetails;
-//   constructor(private showsService: ShowsService) { }
-//   ngOnInit() {
-    //TBD: Replace Show Id.
-//     this.showsService.getSingleShowDetails('540').subscribe(data => (this.showDetails = data));     
   }
 
 }
