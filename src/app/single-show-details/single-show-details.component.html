@@ -12,29 +12,25 @@
       </div>
       <div class="row">
         <span>Genres: </span>
-        <span>Placeholder genres</span>
+        <span>{{ showDetails?.genres }}</span>
       </div>
       <div class="row">
         <span>Rating: </span>
-        <span>Placeholder ★ 9.0</span>
+        <span> ★ {{ showDetails?.rating }}</span>
       </div>
       <div class="row">
         <span>Summary: </span>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+        <span>{{ showDetails?.summary }}</span>
       </div>
       <div class="row"><span>Cast: </span></div>
         <div class="row">
           <ul>
-            <li>Cast 1</li>
-            <li>Cast 2</li>
-            <li>Cast 3</li>
-            <li>Cast 4</li>
-            <!-- <li *ngFor="let ele of element.cast" class="col-lg-3 col-sm-6 col-xs-12">
+            <li *ngFor="let ele of showDetails.cast" class="col-lg-3 col-sm-6 col-xs-12">
               <div class="col-lg-3 col-md-3" >
                 <div>{{ ele.name }}</div>
-                <img src="ele.image" alt="image" class="image img-resize" />
+                <img [src]="ele.image" alt="image" class="image img-resize" />
               </div>
-            </li>-->
+            </li>
           </ul>
         </div>
     </div>
