@@ -14,6 +14,8 @@ export class ShowDetailsComponent implements OnInit {
   constructor(private showsService: ShowsService, private dataStorage: DataStorageService) {
     this.dataStorage.getResults()
     .subscribe(data => this.showName = data)
+    
+    //To persist data for Back button on Single show details page
     if (this.showName == null){
       this.showName = this.dataStorage.getShowResults();
     }
@@ -24,6 +26,7 @@ export class ShowDetailsComponent implements OnInit {
   }
 
   ngOnDestroy(){
+     //To persist data for Back button on Single show details page
     this.dataStorage.setShowResults(this.showName);
   }
 }

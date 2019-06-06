@@ -23,17 +23,18 @@ export class SingleShowDetailsComponent implements OnInit {
     private dataStorage: DataStorageService) { }
 
   ngOnInit() {
-    //console.log("5555555", this.dataStorage.getResults().subscribe(data => this.showName = data));
-    //this.dataStorage.getResults().subscribe(data => this.showName = data);
+    //To persist data for Back button on Single show details page
     this.showName = this.dataStorage.getShowResults();
-    console.log("5555555",this.showName);
+    
     let id = this.route.snapshot.paramMap.get('id');
     // console.log("Show to find details: " + id);
     this.showsService.getSingleShowDetails(id).subscribe(data => (this.showDetails = data))   
   }
 
   ngOnDestroy(){
-    this.dataStorage.setResults(this.showName);
+
+    //this.dataStorage.setResults(this.showName);
+     //To persist data for Back button on Single show details page
     this.dataStorage.setShowResults(this.showName);
   }
 

@@ -130,4 +130,9 @@ span{
     vertical-align:top;
  }
 
+ .spacer {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
  

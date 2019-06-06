@@ -1,36 +1,43 @@
-
-<div *ngIf="(showName != null) && (showName.length > 0); else elseBlock">
-<div id="content" class="container-fluid no-padding">
-  <ul>
-    <li *ngFor="let element of showName" class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-      <a [routerLink]="['/single-show-details', element.showId]" routerLinkActive="active">
-        <div class="column column-block">
-          <div class="card primary grid-x">
-          <figure id="image" class="image small-6 cell">
-              <img [src]="element.image" alt="image" class="image" />   
-          </figure>
-          <div class="content small-6 cell" id="footer">
-              <span class="title">
-                <div>{{ element.name }}</div>
-              </span>
-              <footer class="rating">
-                <div>★ {{ element.rating }} </div> 
-              </footer>
-          </div>
-          </div>
-          <br/>
-        </div>
-      </a>
-    </li>
-  </ul>
+<div *ngIf="showName != null && showName.length > 0; else elseBlock">
+  <div class="spacer">
+    <div id="content" class="container-fluid no-padding">
+      <ul>
+        <li
+          *ngFor="let element of showName"
+          class="col-lg-2 col-md-3 col-sm-6 col-xs-12"
+        >
+          <a
+            [routerLink]="['/single-show-details', element.showId]"
+            routerLinkActive="active"
+          >
+            <div class="column column-block">
+              <div class="card primary grid-x">
+                <figure id="image" class="image small-6 cell">
+                  <img [src]="element.image" alt="image" class="image" />
+                </figure>
+                <div class="content small-6 cell" id="footer">
+                  <span class="title">
+                    <div>{{ element.name }}</div>
+                  </span>
+                  <footer class="rating">
+                    <div>★ {{ element.rating }}</div>
+                  </footer>
+                </div>
+              </div>
+              <br />
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 <ng-template #elseBlock>
   <div class="spacer">
-    <div class="errorMessage msgBlock">
-        <span class="glyphicon glyphicon-info-sign"></span>
+    <div class="errorMessage msgBlock col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <span class="glyphicon glyphicon-info-sign"></span>
       Pardon us, but no shows matching your query were found.
     </div>
-</div>
-  </ng-template>
+  </div>
+</ng-template>
 <router-outlet></router-outlet>
