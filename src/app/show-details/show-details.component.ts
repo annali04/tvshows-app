@@ -14,9 +14,16 @@ export class ShowDetailsComponent implements OnInit {
   constructor(private showsService: ShowsService, private dataStorage: DataStorageService) {
     this.dataStorage.getResults()
     .subscribe(data => this.showName = data)
+    if (this.showName == null){
+      this.showName = this.dataStorage.getShowResults();
+    }
   }
 
   ngOnInit() {
   
+  }
+
+  ngOnDestroy(){
+    this.dataStorage.setShowResults(this.showName);
   }
 }

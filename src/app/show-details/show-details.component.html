@@ -1,5 +1,5 @@
 
-
+<div *ngIf="(showName != null) && (showName.length > 0); else elseBlock">
 <div id="content" class="container-fluid no-padding">
   <ul>
     <li *ngFor="let element of showName" class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
@@ -19,15 +19,18 @@
           </div>
           </div>
           <br/>
-
-
-          
-        
-      
         </div>
       </a>
     </li>
   </ul>
   </div>
-
+</div>
+<ng-template #elseBlock>
+  <div class="spacer">
+    <div class="errorMessage msgBlock">
+        <span class="glyphicon glyphicon-info-sign"></span>
+      Pardon us, but no shows matching your query were found.
+    </div>
+</div>
+  </ng-template>
 <router-outlet></router-outlet>

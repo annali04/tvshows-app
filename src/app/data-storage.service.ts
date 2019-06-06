@@ -8,6 +8,7 @@ import { BehaviorSubject, Subject, Observable } from 'rxjs';
 export class DataStorageService {
 
   private showRes = new Subject<IShowDetails[]>();
+  private showResults: IShowDetails[];
  
   constructor() { }
   setResults(shows: IShowDetails[]) {
@@ -17,5 +18,13 @@ export class DataStorageService {
   getResults(): Observable<IShowDetails[]> {
     return this.showRes.asObservable();
  }
+
+ setShowResults(shows: IShowDetails[]) {
+  this.showResults = shows;
+}
+
+  getShowResults(): IShowDetails[] {
+  return this.showResults;
+}
 
  }

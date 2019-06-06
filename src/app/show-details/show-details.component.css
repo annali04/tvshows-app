@@ -157,3 +157,21 @@ figure {
 .navbar {
     background-color: #192231 !important;
 }
+
+.errorMessage {
+  font-size: 14px;
+  color: rgb(82, 6, 6);
+}
+.msgBlock {
+  background: rgb(167, 155, 158);
+  text-align: center;
+  border: 3px;
+  border-block-color:rgb(82, 6, 6);
+  padding: 35px 35px 35px 35px;
+  margin-left: 600px;
+  margin-right: 600px;
+ }
+ .spacer {
+  padding-top: 40px;
+  padding-bottom: 40px
+}
