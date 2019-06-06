@@ -21,3 +21,16 @@ h1 {
   * {
     font-family: 'Open Sans', sans-serif;
   }
+
+  /* Style the submit button */
+.btn {
+  /* float: left; */
+  width: 100px;
+  /* padding: 10px; */
+  background: #985E6D;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
