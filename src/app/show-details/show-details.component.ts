@@ -11,9 +11,11 @@ import { DataStorageService } from '../data-storage.service';
 export class ShowDetailsComponent implements OnInit {
   //@Input() showName: IShowDetails[];
   showName: IShowDetails[];
+  isResultFetched: boolean = false;
+
   constructor(private showsService: ShowsService, private dataStorage: DataStorageService) {
     this.dataStorage.getResults()
-    .subscribe(data => this.showName = data)
+    .subscribe(data => {this.showName = data; this.isResultFetched = true;})
     
     //To persist data for Back button on Single show details page
     if (this.showName == null){
