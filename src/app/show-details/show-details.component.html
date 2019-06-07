@@ -33,11 +33,13 @@
   </div>
 </div>
 <ng-template #elseBlock>
-  <div class="spacer">
-    <div class="errorMessage msgBlock col-lg-6 col-md-12 col-sm-12 col-xs-12">
-      <span class="glyphicon glyphicon-info-sign"></span>
-      Pardon us, but no shows matching your query were found.
+    <div *ngIf="isResultFetched">
+      <div class="spacer">
+        <div class="errorMessage msgBlock col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <span class="glyphicon glyphicon-info-sign"></span>
+          Pardon us, but no shows matching your query were found.
+        </div>
+      </div>
     </div>
-  </div>
 </ng-template>
 <router-outlet></router-outlet>
