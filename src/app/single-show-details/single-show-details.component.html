@@ -1,4 +1,7 @@
+
+<div *ngIf="showDetails != null">
 <!-- <h1>{{ showDetails?.name }}</h1> -->
+
 
 <div class="container-fluid">
   <div class="row">
@@ -43,9 +46,11 @@
         <span><b>Summary: </b></span>
         <span>{{ showDetails.summary }}</span>
       </div>
-      <div class="row"><span><b>Cast: </b></span></div>
 
+      <div *ngIf="showDetails.cast != null">
+      <div class="row"><span><b>Cast: </b></span></div>
         <div class="row-fluid">
+
           <ul>
             <li *ngFor="let ele of showDetails.cast" class="col-lg-3 col-sm-6 col-xs-6">
               <div class="col-lg-3" >
@@ -55,15 +60,18 @@
             </li>
           </ul>
         </div>
+      </div>
+
     </div>
   </div>
-  </div>
+
+</div>
+</div>
 </div>
 
 
 
-
-    <div class="spacer">
+   <div class="spacer">
       <div  class="col-lg-12 col-sm-12 col-xs-12" style="text-align: center">
       <a routerLink="/shows"><button class="btn btn-info btn-lg"> Back</button></a>
     </div>

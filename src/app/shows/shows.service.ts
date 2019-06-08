@@ -66,6 +66,8 @@ export class ShowsService {
   private transformSingleShowDetails(data: ISingleShowDetailsData): IShowDetails {
 
     var genresTemp =""
+    var summaryTemp=""
+
     for (let i=0; i < data.genres.length; i++){
       genresTemp = genresTemp.concat(data.genres[i]);
       if (i < data.genres.length-1){
@@ -78,6 +80,10 @@ export class ShowsService {
         medium: "../assets/popcorn.jpg"}
     }
 
+    if (data.summary != null) {
+      summaryTemp = data.summary.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, "");
+    }
+
       var displayData = {
         showId: data.id,
         name: data.name != null ? data.name : "",
@@ -85,7 +91,7 @@ export class ShowsService {
         image: data.image,
         rating: data.rating.average, //!= null ? data.rating.average : ""
         language: data.language != null ? data.language : "",
-        summary: data.summary.replace(/<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, ""),
+        summary: summaryTemp,
         cast: null
       }
       console.log("name==",displayData);
