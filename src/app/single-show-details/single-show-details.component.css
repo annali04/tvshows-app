@@ -1,138 +1,96 @@
-.navbar{
-    position:relative;
-    width:auto;
-    height:auto;
-    background-color: rgb(3, 3, 3); 
-    }
-
-.bg-primary {
-    background-color: rgb(3, 3, 3)!important;
-}
-
-
-.navbar-brand {
-    font-size: 30px;
-  }
-
+/* What is this for? */
 * {
     border-radius: 0 !important;
   }
 
-.navbar {
-    background-color: #192231 !important;
+* {
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* * {
-  box-sizing: border-box;
-} */
-
-/* Style the search field */
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 200px;
-  background: #f1f1f1;
-  font-family: Arial;
-}
-
-/* Style the submit button */
-form.example button {
-  float: left;
-  width: 100px;
-  padding: 10px;
-  background: #985E6D;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-
-form.example button:hover {
-  background: #985E6D;
-}
-
-/* Search field position */
-.example {
-  padding: 0 30px 30px 20px;
-}
-
-/* Clear floats */
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-/* Float image to the left and rest of details next to it */
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
-
-/* .img-resize {
-  max-width:300%;
-  max-height:300%;
+/* Cast list styling */
+.imageCast {
+  max-width:100px;
+  max-height:100px;
   overflow: hidden;
-} */
+}
 
 ul {
   list-style-type: none;
   list-style: none;
 }
 
-* {
+.castName {
   font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
 }
 
+/* Show name header */
 h1 {
   color: black;
   padding-right: 5px;
-  margin-top: 15px;
-  margin-left: 15px;
+  margin: 30px 0 15px 60px;
 }
 
+/* Star in rating */
+.star {
+  color: transparent;  
+  text-shadow: 0 0 0 rgb(247, 179, 7);
+}
 span{
-  font-size: 16px;
-  
+  font-size: 16px; 
 }
 
  body{
 	width:100%;
 	margin:auto;
 }
-#wrapper{
+/* #wrapper{
 	display:block;
 	width:100%;
 	margin:auto;
-}
+} */
+
 .content{
 	display:block;
 	width:100%;
-  margin:auto;
+  /* margin-left: 15px !important; */
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
   padding-top:15px;
   padding-left:15px;
+  overflow: auto;
   
 }
 .row {
   padding-left:15px;
 }
 
-  .container-fluid {
-    /* padding-right:0;
-    padding-left:0; */
-    margin-right:auto;
-    margin-left:auto;
-    margin-top: 50px;
-    padding:0 15px 0 15px;
-    vertical-align:top;
+.container-fluid {
+  padding-right:3% !important;
+  padding-left: 3% !important;
+  
+  /* margin-right:auto;
+  margin-left:auto; */
  }
+
+
+ @media(max-width:768px) {
+  .navbar-form {
+      padding: 0 !important;
+      border: 0 !important;
+  }
+  .navbar-form .form-group {
+      margin-bottom: 0 !important;
+  
+  }
+
+  .h1 {
+    text-align: center;
+  }
 
  .spacer {
   padding-top: 30px;
   padding-bottom: 40px;
+
 }
 
  

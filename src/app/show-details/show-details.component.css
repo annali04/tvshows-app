@@ -96,7 +96,7 @@ figure {
     bottom: 0;
     padding: 5px;
     color: white;
-    background-color: #494E6B;
+    background-color: #985E6D;
     font-size: 1.6rem;
     width: 100%;
     /* opacity: 0.85; */
@@ -104,6 +104,11 @@ figure {
 
   .rating {
     text-align: right;
+  }
+
+  .star {
+    color: transparent;  
+    text-shadow: 0 0 0 rgb(247, 179, 7);
   }
 
   .container {

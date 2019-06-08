@@ -6,46 +6,48 @@
         <img [src]=showDetails.image.medium alt=“image” class=“image” />
     </section>
     <div class="content col-lg-10 col-md-9 col-sm-6 col-xs-12">
+
       <div class="row-fluid">
         <span>Language: </span>
-        <span>{{ showDetails?.language }}</span>
+        <span>{{ showDetails.language }}</span>
       </div>
-      
-      <div class="row">
+
+      <div class="row-fluid">
+
         <span>Genres: </span>
-        <span>{{ showDetails?.genres }}</span>
+        <span>{{ showDetails.genres }}</span>
       </div>
 
-      <div class="row">
+      <div class="row-fluid">
+
         <span>Rating: </span>
-        <span> ★ {{ showDetails?.rating }}</span>
+        <span class="star"> ★ </span><span> {{ showDetails.rating }}</span>
       </div>
 
-      <div class="row">
+      <div class="row-fluid">
+
         <span>Summary: </span>
-        <span>{{ showDetails?.summary }}</span>
+        <span>{{ showDetails.summary }}</span>
       </div>
-
-      <div class="row"><span>Cast: </span>
-      </div>
+      <div class="row-fluid"><span>Cast: </span></div>
 
         <div class="row">
           <ul>
-            <li *ngFor="let ele of showDetails.cast" class="col-lg-3 col-sm-6 col-xs-12">
+            <li *ngFor="let ele of showDetails.cast" class="col-lg-3 col-sm-6 col-xs-6">
               <div class="col-lg-3 col-md-3" >
-                <div>{{ ele.name }}</div>
-                <img [src]="ele.image" alt="image" class="image img-resize" />
+                <div class="castName">{{ ele.name }}</div>
+                <img [src]="ele.image" alt="image" class="imageCast" />
               </div>
             </li>
           </ul>
         </div>
-
     </div>
     <div class="spacer">
       <div  class="col-lg-12 col-sm-12 col-xs-12" style="text-align: center">
       <a routerLink="/shows"><button class="btn btn-info btn-lg"> Back</button></a>
     </div>
     </div>
+
 
 
     
