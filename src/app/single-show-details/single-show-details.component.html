@@ -25,26 +25,32 @@
 
     <div class="content col-lg-8 col-md-8 col-sm-12">
     <!-- <div class="content col-lg-10 col-md-9 col-sm-6 col-xs-12"> -->
+      <div *ngIf="showDetails.language!=''">
       <div class="row-fluid">
         <span><b>Language: </b></span>
         <span>{{ showDetails.language }}</span>
       </div>
+       </div>
 
+      <div *ngIf="showDetails.genres!=null && showDetails.genres.length>0">
       <div class="row-fluid">
-
         <span><b>Genres: </b></span>
         <span>{{ showDetails.genres }}</span>
       </div>
+      </div>
 
+      <div *ngIf="showDetails.rating!=null">
       <div class="row-fluid">
-
         <span><b>Rating:</b> </span>
         <span class="star"> ★ </span><span> {{ showDetails.rating }}</span>
       </div>
+      </div>
 
+      <div *ngIf="showDetails.summary!=''">
       <div class="row-fluid">
         <span><b>Summary: </b></span>
         <span>{{ showDetails.summary }}</span>
+      </div>
       </div>
 
       <div *ngIf="showDetails.cast!=null && showDetails.cast.length>0">
