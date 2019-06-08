@@ -47,15 +47,15 @@
         <span>{{ showDetails.summary }}</span>
       </div>
 
-      <div *ngIf="showDetails.cast != null">
+      <div *ngIf="showDetails.cast!=null && showDetails.cast.length>0">
       <div class="row"><span><b>Cast: </b></span></div>
         <div class="row-fluid">
 
           <ul>
             <li *ngFor="let ele of showDetails.cast" class="col-lg-3 col-sm-6 col-xs-6">
               <div class="col-lg-3" >
-                <div class="castName">{{ ele.name }}</div>
                 <img [src]="ele.image" alt="image" class="imageCast" />
+                <div class="castName">{{ ele.name }}</div>
               </div>
             </li>
           </ul>
