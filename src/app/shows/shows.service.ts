@@ -159,7 +159,7 @@ export class ShowsService {
     for (let i = 0; i < castLen; i++) {
       var nameTemp = cast[i].person.name != null ? cast[i].person.name : "";
       var imageTemp =
-        cast[i].person.image != null ? cast[i].person.image.medium : "";
+        cast[i].person.image != null ? cast[i].person.image.medium : "../assets/avatar.png";
 
       let newData = {
         name: cast[i].person.name,
