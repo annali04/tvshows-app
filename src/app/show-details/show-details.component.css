@@ -162,3 +162,31 @@ figure {
 .navbar {
     background-color: #192231 !important;
 }
+
+.errorMessage {
+  font-size: 14px;
+  color: rgb(82, 6, 6);
+}
+.msgBlock {
+  background: rgb(167, 155, 158);
+  text-align: center;
+  border: 3px;
+  border-block-color:rgb(82, 6, 6);
+  padding: 35px 0px 35px 0px;
+  margin-left: 25%;
+  margin-right: 25%;
+ }
+ .spacer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/**Media Query*/
+/** Small devices (phones, 576px and up)*/
+@media (max-width: 767px) { 
+  msgBlock {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+}

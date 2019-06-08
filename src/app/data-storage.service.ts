@@ -8,6 +8,9 @@ import { BehaviorSubject, Subject, Observable } from 'rxjs';
 export class DataStorageService {
 
   private showRes = new Subject<IShowDetails[]>();
+
+  //To persist data for Back button on Single show details page
+  private showResults: IShowDetails[];
  
   constructor() { }
   setResults(shows: IShowDetails[]) {
@@ -17,5 +20,13 @@ export class DataStorageService {
   getResults(): Observable<IShowDetails[]> {
     return this.showRes.asObservable();
  }
+
+ setShowResults(shows: IShowDetails[]) {
+  this.showResults = shows;
+}
+
+  getShowResults(): IShowDetails[] {
+  return this.showResults;
+}
 
  }
