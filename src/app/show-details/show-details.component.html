@@ -12,10 +12,12 @@
           >
             <div class="column column-block">
               <div class="card primary grid-x">
-                <figure id="image" class="image small-6 cell">
+                <div class="image small-12 cell">
+                <figure id="footercontent" class=" ">
                   <img [src]="element.image" alt="image" class="image" />
                 </figure>
-                <div class="content small-6 cell" id="footer">
+                </div>
+                <div class="footercontent small-12 cell" id="footer">
                   <span class="title">
                     <div>{{ element.name }}</div>
                   </span>
@@ -35,7 +37,7 @@
 <ng-template #elseBlock>
     <div *ngIf="isResultFetched">
       <div class="spacer">
-        <div class="errorMessage msgBlock col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="errorMessage msgBlock ">
           <span class="glyphicon glyphicon-info-sign"></span>
           Pardon us, but no shows matching your query were found.
         </div>

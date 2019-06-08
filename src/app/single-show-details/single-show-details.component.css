@@ -44,22 +44,22 @@ span{
 	width:100%;
 	margin:auto;
 }
-/* #wrapper{
-	display:block;
-	width:100%;
-	margin:auto;
-} */
 
 .content{
 	display:block;
 	width:100%;
-  /* margin-left: 15px !important; */
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
   padding-top:15px;
+  padding-bottom:15px;
   padding-left:15px;
   overflow: auto;
   
 }
+
+.imagecontent{
+  padding-top:20px;
+}
+
 .row {
   padding-left:15px;
 }
@@ -67,9 +67,6 @@ span{
 .container-fluid {
   padding-right:3% !important;
   padding-left: 3% !important;
-  
-  /* margin-right:auto;
-  margin-left:auto; */
  }
 
 
@@ -82,16 +79,26 @@ span{
       margin-bottom: 0 !important;
   
   }
-}
-
-  .h1 {
+  .row .h1 {
     text-align: center;
   }
+}
+
 
  .spacer {
   padding-top: 30px;
   padding-bottom: 40px;
 
+}
+
+.btn{
+  background-color:#985E6D;
+  border:#985E6D
+}
+
+.btn:hover{
+  background-color:#985E6D;
+  border:#985E6D
 }
 
  
