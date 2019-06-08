@@ -49,13 +49,15 @@ span{
 	width:100%;
 	margin:auto;
 } */
+
 .content{
 	display:block;
 	width:100%;
-  margin:auto;
+  /* margin-left: 15px !important; */
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
   padding-top:15px;
   padding-left:15px;
+  overflow: auto;
   
 }
 .row {
@@ -63,10 +65,14 @@ span{
 }
 
 .container-fluid {
-  padding-right:20% !important;
+  padding-right:3% !important;
+  padding-left: 3% !important;
+  
   /* margin-right:auto;
   margin-left:auto; */
  }
+
+
 
  @media(max-width:768px) {
   .navbar-form {
@@ -75,6 +81,7 @@ span{
   }
   .navbar-form .form-group {
       margin-bottom: 0 !important;
+  
   }
 
   .h1 {
