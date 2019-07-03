@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { DataStorageService } from './data-storage.service';
 import { SingleShowDetailsComponent } from './single-show-details/single-show-details.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SingleShowDetailsComponent } from './single-show-details/single-show-de
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
+    RouterTestingModule
   ],
   providers: [ShowsService, DataStorageService],
   bootstrap: [AppComponent]
