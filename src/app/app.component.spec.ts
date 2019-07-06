@@ -10,12 +10,15 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { ShowSearchComponent } from './show-search/show-search.component';
 import { SingleShowDetailsComponent } from './single-show-details/single-show-details.component';
+import { ShowsService } from './shows/shows.service';
+import { ShowsServiceFake } from './shows/shows.service.fake';
+import { DataStorageService } from './data-storage.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        BrowserModule,
+    BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
@@ -32,7 +35,9 @@ describe('AppComponent', () => {
         ShowSearchComponent,
         SingleShowDetailsComponent
       ],
-    }).compileComponents();
+      providers:[
+         {provide:ShowsService, useClass: ShowsServiceFake}]
+        }).compileComponents();
   }));
 
   it('should create the app', () => {
@@ -47,10 +52,10 @@ describe('AppComponent', () => {
   //   expect(app.title).toEqual('tvshows-app');
   // });
 
-  // it('should render title in a h1 tag', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('h1').textContent).toContain('Welcome to tvshows-app!');
-  // });
+  it('should render title in <a> tag', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('a').textContent).toContain('TVBuzz');
+  });
 });

@@ -12,10 +12,15 @@ import { forkJoin } from "rxjs";
 import { of } from "rxjs";
 import { ISingleShowDetailsData } from '../isingle-show-details-data';
 
+export interface IShowsService{
+  getShowDetails(showName: string):Observable<IShowDetails[]>
+}
+
 @Injectable({
   providedIn: "root"
 })
-export class ShowsService {
+
+export class ShowsService implements IShowsService {
   constructor(private httpClient: HttpClient) {}
 
   // This function fetches the primary details for a list of show matching the search word

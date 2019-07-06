@@ -8,6 +8,7 @@ import { DataStorageService } from './data-storage.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = ' ';
 
